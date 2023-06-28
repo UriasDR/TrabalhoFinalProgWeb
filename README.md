@@ -1,3 +1,4 @@
 # ControleDeRifas
 
-# rodar um npm install no vscode
+- Rodar um npm install no vscode
+- Ter o bando de dados Postgres nas portas descritas no arquivo application.properties
