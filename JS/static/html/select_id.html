@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Números Comprados</title>
+  <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+<body>
+  <header>
+    <h1>Controle de Rifas</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Página Inicial</a></li>
+      <li><a href="create.html">Criar Rifa</a></li>
+      <li><a href="update.html">Atualizar Rifa</a></li>
+      <li><a href="delete.html">Deletar Rifa</a></li>
+      <li><a>Selecionar por ID</a></li>
+      <li><a href="select_all.html">Selecionar todas as Rifas</a></li>
+    </ul>
+  </nav>
+  <section>
+    <h2>Selecionar por ID</h2>
+    <form>
+      <label for="id_rifa">ID da Rifa:</label>
+      <input class="form-control" type="text" id="id_rifa" name="id_rifa" required>
+      <br>
+      <p id="log"></p>
+      <input class="btn btn-primary" type="submit" value="Selecionar">
+    </form>
+    <table class="table" id="table">
+      <tr class="bg-info">
+        <th>Número</th>
+        <th>Nome da Rifa</th>
+        <th>Data do Sorteio</th>
+        <th>Preço da Rifa</th>
+      </tr>
+    </table>
+
+  </section>
+  <footer>
+    <p>&copy; 2023 Rifa Online. Todos os direitos reservados.</p>
+  </footer>
+  <script src="../../getById.js"></script>
+</body>
+
+</html>

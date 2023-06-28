@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Criar Rifa</title>
+  <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+</head>
+<style></style>
+
+<body>
+  <header>
+    <h1>Controle de Rifas</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Página Inicial</a></li>
+      <li><a>Criar Rifa</a></li>
+      <li><a href="update.html">Atualizar Rifa</a></li>
+      <li><a href="delete.html">Deletar Rifa</a></li>
+      <li><a href="select_id.html">Selecionar por ID</a></li>
+      <li><a href="select_all.html">Selecionar todas as Rifas</a></li>
+    </ul>
+  </nav>
+  <section>
+    <h2>Criar Rifa</h2>
+    <form>
+      <label for="num_rifa">Número da Rifa:</label>
+      <input class="form-control" type="number" id="num_rifa" name="num_rifa" required />
+      <br />
+      <label for="nome_rifa">Nome da Rifa:</label>
+      <input class="form-control" type="text" id="nome_rifa" name="nome_rifa" required />
+      <br />
+      <label for="data_sorteio">Data do Sorteio:</label>
+      <input class="form-control" type="date" id="data_sorteio" name="data_sorteio" required />
+      <br />
+      <label for="preco_numero">Preço por Número:</label>
+      <input class="form-control" type="number" id="preco_numero" name="preco_numero" min="0.01" step="0.01" required />
+      <br />
+      <input class="btn btn-primary" type="submit" value="Criar" />
+    </form>
+    <p id="log"></p>
+  </section>
+  <footer>
+    <p>&copy; 2023 Rifa Online. Todos os direitos reservados.</p>
+  </footer>
+  <script src="../../create.js"></script>
+</body>
+
+</html>
