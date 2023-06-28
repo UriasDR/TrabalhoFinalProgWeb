@@ -1,0 +1,124 @@
+openapi: 3.0.3
+info:
+  title: Rifa API
+  version: 1.0.0
+paths:
+  /Rifas:
+    post:
+      summary: Salvar uma nova Rifa
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RifaDto'
+      responses:
+        '201':
+          description: Rifa salva com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RifaModel'
+        '409':
+          description: Conflito - Número de rifa já comprado
+          content:
+            application/json:
+              schema:
+                type: string
+      tags:
+        - Rifas
+    get:
+      summary: Obter todas as Rifas
+      parameters:
+        - $ref: '#/components/parameters/PageableParameter'
+      responses:
+        '200':
+          description: Lista de todas as Rifas
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PageOfRifaModel'
+      tags:
+        - Rifas
+  '/Rifas/{id}':
+    get:
+      summary: Obter uma Rifa específica pelo ID
+      parameters:
+        - name: id
+          in: path
+          description: ID da Rifa
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Rifa encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RifaModel'
+        '404':
+          description: Rifa não encontrada
+          content:
+            application/json:
+              schema:
+                type: string
+      tags:
+        - Rifas
+    delete:
+      summary: Excluir uma Rifa específica pelo ID
+      parameters:
+        - name: id
+          in: path
+          description: ID da Rifa
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Rifa excluída com sucesso
+          content:
+            application/json:
+              schema:
+                type: string
+        '404':
+          description: Rifa não encontrada
+          content:
+            application/json:
+              schema:
+                type: string
+      tags:
+        - Rifas
+    put:
+      summary: Atualizar uma Rifa específica pelo ID
+      parameters:
+        - name: id
+          in: path
+          description: ID da Rifa
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RifaDto'
+      responses:
+        '200':
+          description: Rifa atualizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RifaModel'
+        '404':
+          description: Rifa não encontrada
+          content:
+            application/json:
+              schema:
+                type: string
+      tags:
+        - Rifas

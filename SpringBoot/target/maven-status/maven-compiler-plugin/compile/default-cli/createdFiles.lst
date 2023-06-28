@@ -1,0 +1,8 @@
+com\uri\pauloeurias\TrabalhoFinal\configuration\DateConfig.class
+com\uri\pauloeurias\TrabalhoFinal\services\RifaService.class
+com\uri\pauloeurias\TrabalhoFinal\TrabalhoFinalApplication.class
+com\uri\pauloeurias\TrabalhoFinal\dtos\RifaDto.class
+com\uri\pauloeurias\TrabalhoFinal\controllers\RifaController.class
+com\uri\pauloeurias\TrabalhoFinal\models\RifaModel.class
+com\uri\pauloeurias\TrabalhoFinal\repositories\RifaRepository.class
+com\uri\pauloeurias\TrabalhoFinal\configuration\SwaggerConfig.class
